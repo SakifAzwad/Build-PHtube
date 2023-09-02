@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        .body
+        {
+            font-family: 'Inter', sans-serif;
+        }
+        .color1
+        {
+            background-color: rgba(37, 37, 37, 0.20);
+        }
+        .color2
+        {
+            background-color: rgba(23, 23, 23, 0.20);
+        }
+        .color3
+        {
+            color: rgba(37, 37, 37, 0.70);
+        }
+        .color4
+        {
+            background-color: rgba(37, 37, 37, 0.15);
+        }
+        .color5
+        {
+            color: rgba(23, 23, 23, 0.70);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar flex justify-center mt-4 w-auto md:mx-20 bg-zinc-200">
+        <a onclick="goback()" class="btn btn-active btn-neutral normal-case text-xl">Go Back</a>
+      </div>
+      <div class="collapse collapse-arrow bg-rose-700 mt-4 w-auto md:mx-20">
+        <input type="radio" name="my-accordion-2" checked="checked" /> 
+        <div class="collapse-title text-xl md:text-3xl font-medium text-white mb-8">
+            Discuss the scope of var, let, and const.
+        </div>
+        <div class="collapse-content text-white"> 
+          <p>
+            <div class="overflow-x-auto text-white">
+                <table class="table text-white">
+                  <!-- head -->
+                  <thead>
+                    <tr class="text-white text-xs md:text-xl">
+                      
+                      <th>var</th>
+                      <th>let</th>
+                      <th>const</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                      
+                      <td>var has the function or global scope.</td>
+                      <td>let's have the block scope.</td>
+                      <td>const variable has the block scope.</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr>
+                      
+                      <td>It gets hoisted to the top of its scope and initialized undefined.</td>
+                      <td>It also got hoisted to the top of its scope but didn't initialize.</td>
+                      <td>It also got hoisted to the top of its scope but didn't initialize.</td>
+                    </tr>
+                    <!-- row 3 -->
+                    <tr>
+                      
+                      <td>It can be updated or re-declared.</td>
+                      <td>It can only be updated and can't be re-declared.</td>
+                      <td>It can't be updated or re-declared.</td>
+                    </tr>
+                    <tr>
+                      
+                      <td>It's an old way to declare a variable.</td>
+                      <td>It's a new way to declare variables introduced in ES6.</td>
+                      <td>It's also a new way to declare a variable, which introduces in ES6.</td>
+                    </tr>
+                    <tr>
+                      
+                      <td>Can be declared without initialization.</td>
+                      <td>Can be declared without initialization.</td>
+                      <td>Cannot be declared without initialization.</td>
+                    </tr>
+                    <tr>
+                      
+                      <td>Can be accessed without initialization as its default value is “undefined”.</td>
+                      <td>Cannot be accessed without initialization, leading to 'referenceError'.</td>
+                      <td>Cannot be accessed without initialization, as it cannot be declared without initialization in the first place.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-fuchsia-700 mt-4 md:mx-20 w-auto">
+        <input type="radio" name="my-accordion-2" /> 
+        <div class="collapse-title text-xl md:text-3xl font-medium text-white mb-8">
+            Tell us the use cases of null and undefined
+        </div>
+        <div class="collapse-content text-white"> 
+            <p>
+              <div class="overflow-x-auto text-white">
+                  <table class="table text-white">
+                    <!-- head -->
+                    <thead>
+                      <tr class="text-white text-xl">
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- row 1 -->
+                      <tr>
+                        
+                        <td>Null is an assignment value. It can be assigned to a variable as a representation of no value. </td>
+                        <td>Undefined means a variable has been declared but has yet not been assigned a value.</td>
+                        
+                      </tr>
+                      <!-- row 2 -->
+                    </tbody>
+                  </table>
+                  <div class="text-xl">
+                    <h1>The data type of undefined is undefined whereas that of null is object. We can find the datatypes of both undefined and null using the typeof operator.<br>When used in arithmetic operations, undefined will result in NaN (not a number), whereas null will be converted to 0 behind the screens.<br>When used in conditional logic both undefined and null will return false.<br></h1>
+                        <br>
+                        <h1 class="font-bold italic">Use Cases for null:</h1>
+                
+                        <br>
+                    <h1>Explicitly Indicating the Absence of a Value: </h1>
+                    <br>
+                    <h1>null is often used to explicitly represent the absence of a value or the intentional absence of an object's value. It is used when you want to indicate that a variable or property has no meaningful value.</h1>
+                    <br>
+                    <h1>Resetting Object Properties: </h1>
+                    <br>
+                    <h1>You can set an object property to null to indicate that it no longer holds a valid reference or data.</h1>
+                    <br>
+                        <h1 class="font-bold italic">Use Cases for undefined:</h1>
+                        
+                        <br>
+                        <h1>Variable Declaration: </h1>
+                    <br>
+                    <h1> Variables that are declared but not assigned a value automatically have the value undefined.</h1>
+                    <br>
+                    <h1>Function Parameters: </h1>
+                    <br>
+                    <h1>When a function is called with fewer arguments than declared parameters, the remaining parameters are undefined. </h1>
+                    <br>
+                    <h1>Accessing Nonexistent Object Properties:</h1>
+                    <br>
+                    <h1>When you try to access an object property that doesn't exist, it returns undefined.</h1>
+                    <br>
+                    <h1>Return Value from Functions:</h1>
+                    <br>
+                    <h1> If a function does not explicitly return a value, it implicitly returns undefined.</h1>
+                    <br>
+                    <h1>Variable Scope: </h1>
+                    <br>
+                    <h1>Variables declared with var are automatically initialized with undefined if not explicitly assigned a value.</h1>
+                
+                </div>
+                </div>
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-blue-700 mt-4 w-auto md:mx-20 mb-16">
+            <input type="radio" name="my-accordion-2" /> 
+            <div class="collapse-title text-xl md:text-3xl font-medium text-white mb-8">
+                What do you mean by REST API?
+            </div>
+            <div class="collapse-content text-white text-xl"> 
+          <p>A REST API (Representational State Transfer Application Programming Interface) is a way to create and interact with web services. It's like a set of rules for building web applications that communicate over the internet. Here are some key points:
+
+            No Memory: Each time a request is made, it should include all the information needed. The server doesn't remember past requests.
+            
+            Client and Server: The client (e.g., your web browser) and the server (the computer serving the web page) are separate. They talk to each other over the internet.
+            
+            Simple Rules: REST APIs use simple rules for working with data. For example, you can use standard actions like GET (to get data), POST (to send data), PUT (to update data), and DELETE (to delete data).
+            
+            Resources: Everything is treated as a resource with a unique URL (web address). Think of a resource like a piece of data you want to access, like a web page or an image.
+            
+            Different Views: Resources can be shown in different ways. For example, you can view a web page as HTML, JSON, or XML.
+            
+            Easy to Scale: REST makes it easy to expand and grow your web service because of its simplicity and separation between client and server.
+            
+            Layers: You can add extra layers, like caching or security, between the client and server without breaking things.
+            
+            No Memory: The server doesn't remember past requests from the client. Each request must contain all the information needed.
+            
+            Caching: The server can say whether a response can be stored and reused by the client, which can speed things up.
+            
+            Client Control: Clients (like your web browser) can control what they want from the server. Servers don't keep track of client state.
+            
+            In simple terms, RESTful APIs are a set of guidelines for building web services that are easy to use and can communicate with each other over the internet. They're widely used for building websites, mobile apps, and connecting different online services. REST APIs are favored because they are straightforward and work well with the internet's foundation, HTTP.</p>
+        </div>
+      </div>
+      <script>
+        function goback()
+        {
+            window.location.href='index.html';
+        }
+      </script>
+</body>
+</html>
